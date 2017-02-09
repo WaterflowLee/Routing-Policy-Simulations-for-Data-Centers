@@ -22,32 +22,32 @@ reps = 10
 
 util = lamb / (float)(mu * c)
 
-# # 	def __init__(lamb, mu, c, simTime, reps):
-# mySim = Simulator(lamb, mu, c, st, reps)
-#
-# mySim.runSimulation()
-#
-# throughput = mySim.getThroughput()
-# avgjobsinsys = mySim.getAvgJobsInSimulation()
-#
-# roundedAvg = [round(elem, accuracy) for elem in avgjobsinsys]
-# roundedThroughput = [round(elem, accuracy) for elem in throughput]
-#
-# print 'Params: (', lamb, ', ', mu, ', ', c, ', ', st, ', ', reps ,')'
-#
-# print 'Utilization: ', round(util, accuracy)
-#
-# print 'Throughput: ', roundedThroughput
-#
-# print 'Avg # Jobs in System: ', roundedAvg
-#
-# print 'Throughput Average: ', round((sum(roundedThroughput) / len(roundedThroughput)), accuracy)
-#
-# print 'Average Average Number of Jobs in System: ', round((sum(roundedAvg) / len(roundedAvg)), accuracy)
-#
-# mean, lower, upper = mean_confidence_interval(avgjobsinsys)
-#
-# print 'CI: [', round(lower, accuracy), ',', round(upper, accuracy), ']'
+# 	def __init__(lamb, mu, c, simTime, reps):
+mySim = Simulator(lamb, mu, c, st, reps)
+
+mySim.runSimulation()
+
+throughput = mySim.getThroughput()
+avgjobsinsys = mySim.getAvgJobsInSimulation()
+
+roundedAvg = [round(elem, accuracy) for elem in avgjobsinsys]
+roundedThroughput = [round(elem, accuracy) for elem in throughput]
+
+print 'Params: (', lamb, ', ', mu, ', ', c, ', ', st, ', ', reps ,')'
+
+print 'Utilization: ', round(util, accuracy)
+
+print 'Throughput: ', roundedThroughput
+
+print 'Avg # Jobs in System: ', roundedAvg
+
+print 'Throughput Average: ', round((sum(roundedThroughput) / len(roundedThroughput)), accuracy)
+
+print 'Average Average Number of Jobs in System: ', round((sum(roundedAvg) / len(roundedAvg)), accuracy)
+
+mean, lower, upper = mean_confidence_interval(avgjobsinsys)
+
+print 'CI: [', round(lower, accuracy), ',', round(upper, accuracy), ']'
 
 mySim = Simulator(lamb, mu, 2, st, 1)
 mySim.runSimulation()

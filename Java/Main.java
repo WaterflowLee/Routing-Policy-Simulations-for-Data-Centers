@@ -1,15 +1,13 @@
-package com.company;
-
 public class Main {
 
     public static void main(String[] args) {
-        double lamb = 4d;
-        double mu = 1d;
-        double simTime = 10000;
-        int c = 2;
-        int reps = 3;
+        double arrivalRate = 4d;
+        double departRate  = 1d;
+        double simTime     = 10000;
+        int numServers     = 2;
+        int reps           = 3;
 
-        Simulator s = new Simulator(lamb, mu, c, simTime, reps);
+        Simulator s = new Simulator(arrivalRate, departRate, numServers, simTime, reps);
         s.runSimulation();
 
         double[] throughput = s.getThroughput();
